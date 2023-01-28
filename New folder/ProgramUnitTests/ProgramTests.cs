@@ -116,5 +116,21 @@ namespace ProgramTests
             Assert.AreEqual(expectedResults, actualResults);
 
         }
+        [Test]
+        public void Test_ProgramSum_TwoPositiveNumbersAndTwoNegativeNumbers()
+        {
+            string input = "5 10 -12 -13";
+            var writer = new StringWriter();
+            Console.SetOut(writer); //Redirect Console.Out
+            var reader = new StringReader(input);
+            Console.SetIn(reader); //Redirect Console.IN
+
+            Program.Main();
+
+            var actualResults = writer.ToString();
+            var expectedResults = "The sum is: " + Environment.NewLine + "-10" + Environment.NewLine;
+            Assert.AreEqual(expectedResults, actualResults);
+
+        }
     }
 }
