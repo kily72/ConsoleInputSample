@@ -123,7 +123,7 @@ namespace ProgramTests
             var writer = new StringWriter();
             Console.SetOut(writer); //Redirect Console.Out
             var reader = new StringReader(input);
-            Console.SetIn(reader); //Redirect Console.IN
+            Console.SetIn(reader); //Redirect Console.In
 
             Program.Main();
 
